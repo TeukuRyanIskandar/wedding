@@ -26,11 +26,9 @@ const CardContent: React.FC<CardContentProps> = ({ isMusicPlaying }) => {
             entries.forEach(entry => {
                 if (entry.target instanceof HTMLElement) {
                     if (entry.isIntersecting) {
-                        console.log(`Element ${entry.target.className} is intersecting - Adding fadeIn`);
                         entry.target.classList.remove(Styles.fadeOut);
                         entry.target.classList.add(Styles.fadeIn);
                     } else {
-                        console.log(`Element ${entry.target.className} is not intersecting - Adding fadeOut`);
                         entry.target.classList.remove(Styles.fadeIn);
                         entry.target.classList.add(Styles.fadeOut);
                     }
@@ -72,7 +70,7 @@ const CardContent: React.FC<CardContentProps> = ({ isMusicPlaying }) => {
                 <div className={`${Styles["wishes-wrapper"]} ${Styles["content-item"]} ${Styles["initially-hidden"]}`}>
                     <Wishes />
                 </div>
-                {isMusicPlaying && <Music />} {/* Only render Music if isMusicPlaying is true */}
+                {isMusicPlaying && <Music />}
             </div>
         </div>
     );

@@ -11,11 +11,11 @@ const CardLayout: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isScrollable, setIsScrollable] = useState(false);
-  const [isMusicPlaying, setIsMusicPlaying] = useState(false); // Add music playing state
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
   const handleClick = () => {
     setIsAnimating(true);
-    setIsMusicPlaying(true); // Set music to play when the button is clicked
+    setIsMusicPlaying(true);
   };
 
   const handleAnimationEnd = () => {
@@ -31,7 +31,7 @@ const CardLayout: React.FC = () => {
         <div className={Styles["layout-container"]}>
           <div className={Styles["layout-area"]}>
             <Arc />
-            <CardContent isMusicPlaying={isMusicPlaying} />  {/* Pass the music state */}
+            <CardContent isMusicPlaying={isMusicPlaying} />
             <BottomOverlay />
           </div>
         </div>
@@ -65,7 +65,7 @@ const CardLayout: React.FC = () => {
         </div>
         <div className={Styles["layout-area"]}>
           <Arc />
-          <CardContent isMusicPlaying={isMusicPlaying} />  {/* Pass the music state */}
+          <CardContent isMusicPlaying={isMusicPlaying} />
           <BottomOverlay />
         </div>
       </div>
